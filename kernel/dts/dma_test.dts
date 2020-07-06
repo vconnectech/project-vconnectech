@@ -1,0 +1,144 @@
+#include "zynqmp-zcu102-revB.dts"
+
+/{
+	model = "ZynqMP ZCU102 Rev1.0";
+	compatible = "xlnx,zynqmp-zcu102-rev1.0", "xlnx,zynqmp-zcu102", "xlnx,zynqmp";
+
+	uio_dma_exp@0xA0000000 {
+		compatible = "uio-dma-exp";
+		reg = <0x0 0xA0000000 0x0 0x100>;
+		base = <0xA0000000>;
+	};
+
+	uio_dma_exp@0xA0010000 {
+		compatible = "uio-dma-exp";
+		reg = <0x0 0xA0010000 0x0 0x100>;
+		base = <0xA0010000>;
+	};
+
+
+	uio_dma_exp@0xA0011000 {
+		compatible = "uio-dma-exp";
+		reg = <0x0 0xA0011000 0x0 0x100>;
+		base = <0xA0011000>;
+	};
+
+
+	uio_dma_exp@0xA0012000 {
+		compatible = "uio-dma-exp";
+		reg = <0x0 0xA0012000 0x0 0x100>;
+		base = <0xA0012000>;
+	};
+
+
+/*
+amba_pl: amba_pl@0 {
+#address-cells = <2>;
+#size-cells = <2>;
+			 compatible = "simple-bus","xlnx,ps7-axi-interconnect-1.00.a";
+			 ranges ;
+
+
+
+axi_dma_0: dma@a0000000 {
+				#dma-cells = <1>;
+			   clock-names = "s_axi_lite_aclk", "m_axi_sg_aclk", "m_axi_mm2s_aclk", "m_axi_s2mm_aclk";
+			   // clocks = <&misc_clk_0>, <&misc_clk_0>, <&misc_clk_0>, <&misc_clk_0>;
+			   clocks = <&zynqmp_clk 71>, <&zynqmp_clk 71>, <&zynqmp_clk 71>, <&zynqmp_clk 71>;
+			   //               compatible = "xlnx,axi-dma-7.1","xlnx,axi-dma-1.00.a";
+			   compatible = "xlnx,axi-dma-6.03.a", "xlnx,axi-dma-1.00.a", "xlnx,axi-dma";
+
+			   interrupt-parent = <&gic>;
+			   interrupts = <0 89 4 0 90 4>;
+			   reg = <0x0 0xa0000000 0x0 0x10000>;
+			   xlnx,addrwidth = <0x20>;
+			   //         xlnx,addrwidth = <31>;
+			   //         xlnx,dlytmr-resolution = <0x7d>;
+			   //         xlnx,enable-multi-channel = <0x0>; //
+			   //     xlnx,generic = <0x1>;
+			   xlnx,include-mm2s = <0x1>;
+			   xlnx,include-mm2s-dre = <0x0>;
+			   //		   xlnx,include-mm2s-sf = <0x1>;
+			   xlnx,include-s2mm = <0x1>;
+			   xlnx,include-s2mm-dre = <0x0>;
+			   //	       xlnx,include-s2mm-sf = <0x1>;
+			   //xlnx,include-sg ;
+			   xlnx,mm2s-burst-size = <0x100>;
+			   xlnx,num-mm2s-channels = <0x1>;
+			   xlnx,num-s2mm-channels = <0x1>;
+			   //     xlnx,prmry-is-aclk-async = <0x0>;
+			   xlnx,s2mm-burst-size = <0x100>;
+			   //		xlnx,sg-include-desc-queue = <0x0>;
+			   //      xlnx,sg-include-stscntrl-strm = <0x0>;
+			  // xlnx,sg-length-width = <0x17>;
+			   //     xlnx,sg-length-width = <23>;
+			   //     xlnx,genlock-mode = <3>;
+			   //xlnx,sg-use-stsapp-length = <0x1>;
+			   dma-channel@a0000000 {
+				   compatible = "xlnx,axi-dma-mm2s-channel";
+				   dma-channels = <0x1>;
+				   //  dma-channels = <1>;
+				   interrupts-parent = <&gic>;
+				   interrupts = <0 89 4>;
+				   xlnx,datawidth = <0x80>;
+				   xlnx,device-id = <0x0>;
+				   // xlnx,genlock-mode ;
+				   // xlnx,include-dre ;
+				   //   xlnx,include-dre = <0x0> ;
+				   //   xlnx,mm2s-burst-size = <0x100>;
+
+			   }; 
+
+			   dma-channel@a0000030 {
+				   compatible = "xlnx,axi-dma-s2mm-channel";
+				   dma-channels = <0x1>;
+				   //                   dma-channels = <1>;
+				   interrupts-parent = <&gic>;
+				   interrupts = <0 90 4>;
+				   //     xlnx,datawidth = <63>;
+				   xlnx,datawidth = <0x80>;
+				   xlnx,device-id = <0x0>;
+				   //     xlnx,genlock-mode ;
+				   //   xlnx,include-dre ;
+				   //   xlnx,include-dre = <0x0> ;
+				   //   xlnx,s2mm-burst-size = <0x100>;
+			   };
+		   };
+misc_clk_0: misc_clk_0 {
+				compatible = "fixed-clock";
+#clock-cells = <0>;
+				  clock-frequency = <100000000>;
+	//			clock-frequency = <100>;  //testing 
+			};
+		 };
+
+axidmatest_1: axidmatest@1 {
+				  compatible ="xlnx,axi-dma-test-1.00.a","xlnx,axi-vdma-test-1.00.a";
+				  dmas = <&axi_dma_0 0
+					  &axi_dma_0 1>;
+				  dma-names = "axidma0", "axidma1";
+			  };
+
+s_axi_lite_aclk: s_axi_aclk {
+					 clock-cells = <0>;
+					 xlnx,clk-freq = <0x5f5e100>;
+					   clock-frequency = <100000000>;
+				//	 clock-frequency = <100>;
+					 compatible = "fixed-clock";
+				 };
+m_axi_mm2s_aclk: m_axi_mm2s_aclk {
+#clock-cells = <0>;
+					 xlnx,clk-freq = <0x5f5e100>;
+					  clock-frequency = <100000000>;
+				//	 clock-frequency = <100>;
+					 compatible = "fixed-clock";
+				 };
+m_axi_s2mm_aclk: m_axi_mm2s_aclk {
+#clock-cells = <0>;
+					 xlnx,clk-freq = <0x5f5e100>;
+					   clock-frequency = <100000000>;
+					// clock-frequency = <100>;
+					 compatible = "fixed-clock";
+				 };
+*/
+}; 
