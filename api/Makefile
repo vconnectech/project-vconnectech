@@ -1,4 +1,4 @@
-SUBDIRS := uio_app 
+SUBDIRS := PL PS 
 
 all: $(SUBDIRS)
 $(SUBDIRS):
