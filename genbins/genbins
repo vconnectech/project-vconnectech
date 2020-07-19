@@ -1,0 +1,14 @@
+#!/bin/bash -e
+TOP=$(pwd)
+# make images
+if [ "$1" = "clean" ]
+then
+	echo "cleaning the images"
+  	rm BOOT.BIN stream-tv.itb || exit $?
+fi
+echo "Building boot images"
+cd ${TOP} && \
+	/home/unique/sdk/SDK/2019.1/bin/bootgen -arch zynqmp -image stream-tv.bif -o BOOT.BIN -w on && \
+	./mkimage -f stream-tv.its stream-tv.itb
+
+exit $?

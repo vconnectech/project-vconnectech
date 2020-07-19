@@ -1,0 +1,4 @@
+Description
+1: To every pheripheral we need to change the fsbl.elf & .bit file in stream-tv.bif 
+2: To successful pheripheral we need to change even the dts files and Image for driver changes 
+    NOTE: driver changes requires only for particular phepheral
