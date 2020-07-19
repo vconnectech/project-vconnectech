@@ -51,7 +51,7 @@
 ******************************************************************************/
 
 /***************************** Include Files *********************************/
-
+#include<stdio.h>
 #include "xstatus.h"
 #include "xparameters.h"
 #include "xiicps.h"
@@ -89,6 +89,9 @@ XIicPs_Config *XIicPs_LookupConfig(u16 DeviceId)
 {
 	XIicPs_Config *CfgPtr = NULL;
 	s32 Index;
+
+
+	printf("%s %d",__func__,__LINE__);
 
 	for (Index = 0; Index < XPAR_XIICPS_NUM_INSTANCES; Index++) {
 		if (XIicPs_ConfigTable[Index].DeviceId == DeviceId) {

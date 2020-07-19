@@ -52,12 +52,6 @@
 
 /***************************** Include Files *********************************/
 #include "xiicps.h"
-#include "xiicps_hw.h"
-#include "xil_assert.h"
-#include "xil_types.h"
-#include <stdlib.h>
-#include <stdio.h>
-#include "xil_io.c"
 
 /************************** Constant Definitions *****************************/
 
@@ -69,8 +63,6 @@
 extern s32 TransmitFifoFill(XIicPs *InstancePtr);
 
 static s32 SlaveRecvData(XIicPs *InstancePtr);
-
-//#define XIicPs_In32      Xil_In32
 
 /************************* Variable Definitions *****************************/
 
@@ -95,15 +87,13 @@ void XIicPs_SetupSlave(XIicPs *InstancePtr, u16 SlaveAddr)
 	u32 ControlReg;
 	u32 BaseAddr;
 
-
-
 	Xil_AssertVoid(InstancePtr != NULL);
 	Xil_AssertVoid(InstancePtr->IsReady == (u32)XIL_COMPONENT_IS_READY);
 	Xil_AssertVoid(XIICPS_ADDR_MASK >= SlaveAddr);
 
 	BaseAddr = InstancePtr->Config.BaseAddress;
 
-	ControlReg = XIicPs_In32(BaseAddr + XIICPS_CR_OFFSET);
+	ControlReg = XIicPs_In32(BaseAddr , XIICPS_CR_OFFSET);
 
 	/*
 	 * Set up master, AckEn, nea and also clear fifo.
@@ -145,7 +135,6 @@ void XIicPs_SlaveSend(XIicPs *InstancePtr, u8 *MsgPtr, s32 ByteCount)
 	/*
 	 * Assert validates the input arguments
 	 */
-
 	Xil_AssertVoid(InstancePtr != NULL);
 	Xil_AssertVoid(MsgPtr != NULL);
 	Xil_AssertVoid(InstancePtr->IsReady == (u32)XIL_COMPONENT_IS_READY);

@@ -1,0 +1,224 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ARCHIVER	Makefile	/^ARCHIVER=aarch64-linux-gnu-ar$/;"	m
+AddrAsSlaveHandler	xiic_slave.c	/^static void AddrAsSlaveHandler(XIic *InstancePtr)$/;"	f	file:
+AddrOfSlave	xiic.h	/^	int AddrOfSlave;	\/**< Slave Address writing to *\/$/;"	m	struct:__anon3
+ArbitrationLost	xiic.h	/^	u8 ArbitrationLost;\/**< Number of times arbitration was lost *\/$/;"	m	struct:__anon2
+ArbitrationLostHandler	xiic_multi_master.c	/^static void ArbitrationLostHandler(XIic *InstancePtr)$/;"	f	file:
+BNBOnly	xiic.h	/^	u32 BNBOnly;		\/**< TRUE when BNB interrupt needs to *\/$/;"	m	struct:__anon3
+BaseAddress	xiic.h	/^	UINTPTR BaseAddress;	\/**< Device base address *\/$/;"	m	struct:__anon3
+BaseAddress	xiic.h	/^	UINTPTR BaseAddress;  \/**< Device base address *\/$/;"	m	struct:__anon1
+BusBusy	xiic.h	/^	u8 BusBusy;	   \/**< Number of times bus busy status returned *\/$/;"	m	struct:__anon2
+BusNotBusyHandler	xiic_multi_master.c	/^static void BusNotBusyHandler(XIic *InstancePtr)$/;"	f	file:
+COMPILER	Makefile	/^COMPILER=aarch64-linux-gnu-gcc$/;"	m
+COMPILER_FLAGS	Makefile	/^COMPILER_FLAGS=$/;"	m
+CP	Makefile	/^CP=aarch64-linux-gnu-cp$/;"	m
+DeviceId	xiic.h	/^	u16 DeviceId;	  \/**< Unique ID  of device *\/$/;"	m	struct:__anon1
+DynRecvData	xiic_l.c	/^static unsigned DynRecvData(UINTPTR BaseAddress, u8 *BufferPtr, u8 ByteCount)$/;"	f	file:
+DynRecvMasterData	xiic_dyn_master.c	/^static void DynRecvMasterData(XIic *InstancePtr)$/;"	f	file:
+DynSendData	xiic_l.c	/^static unsigned DynSendData(UINTPTR BaseAddress, u8 *BufferPtr,$/;"	f	file:
+DynSendMasterData	xiic_dyn_master.c	/^static void DynSendMasterData(XIic *InstancePtr)$/;"	f	file:
+EXTRA_COMPILER_FLAGS	Makefile	/^EXTRA_COMPILER_FLAGS=$/;"	m
+GpOutWidth	xiic.h	/^	u8 GpOutWidth;		\/**< General purpose output width *\/$/;"	m	struct:__anon3
+GpOutWidth	xiic.h	/^	u8 GpOutWidth;	  \/**< Number of bits in general purpose output *\/$/;"	m	struct:__anon1
+Has10BitAddr	xiic.h	/^	int Has10BitAddr;	\/**< TRUE when 10 bit addressing in design *\/$/;"	m	struct:__anon3
+Has10BitAddr	xiic.h	/^	int Has10BitAddr; \/**< Does device have 10 bit address decoding *\/$/;"	m	struct:__anon1
+IIC_RX_FIFO_DEPTH	xiic_l.h	219;"	d
+IIC_TX_FIFO_DEPTH	xiic_l.h	212;"	d
+INCLUDEDIR	Makefile	/^INCLUDEDIR=..\/..\/..\/include -I ..\/..\/..\/common\/$/;"	m
+INCLUDEFILES	Makefile	/^INCLUDEFILES=xiic.h xiic_l.h$/;"	m
+INCLUDES	Makefile	/^INCLUDES=-I.\/. -I${INCLUDEDIR}$/;"	m
+IicInterrupts	xiic.h	/^	u8 IicInterrupts;  \/**< Number of IIC (device) interrupts *\/$/;"	m	struct:__anon2
+IsBusBusy	xiic_dyn_master.c	/^static int IsBusBusy(XIic *InstancePtr)$/;"	f	file:
+IsBusBusy	xiic_master.c	/^static int IsBusBusy(XIic *InstancePtr)$/;"	f	file:
+IsDynamic	xiic.h	/^	int IsDynamic;		  \/**< TRUE when Dynamic control is used *\/$/;"	m	struct:__anon3
+IsReady	xiic.h	/^	int IsReady;		\/**< Device is initialized and ready *\/$/;"	m	struct:__anon3
+IsSlaveSetAckOff	xiic.h	/^	int IsSlaveSetAckOff;	  \/**< TRUE when Slave has set the ACK Off *\/$/;"	m	struct:__anon3
+IsStarted	xiic.h	/^	int IsStarted;		\/**< Device has been started *\/$/;"	m	struct:__anon3
+LIB	Makefile	/^LIB=libxil.a$/;"	m
+LIBSOURCES	Makefile	/^LIBSOURCES=*.c$/;"	m
+NotAddrAsSlaveHandler	xiic_slave.c	/^static void NotAddrAsSlaveHandler(XIic *InstancePtr)$/;"	f	file:
+OBJECTS	Makefile	/^OBJECTS =	$(addsuffix .o, $(basename $(wildcard *.c)))$/;"	m
+OUTS	Makefile	/^OUTS = *.o$/;"	m
+Options	xiic.h	/^	u32 Options;		\/**< Current operating options *\/$/;"	m	struct:__anon3
+RELEASEDIR	Makefile	/^RELEASEDIR=..\/..\/..\/lib$/;"	m
+RecvBufferPtr	xiic.h	/^	u8 *RecvBufferPtr;	\/**< Buffer to receive (state) *\/$/;"	m	struct:__anon3
+RecvByteCount	xiic.h	/^	int RecvByteCount;	\/**< Number of empty bytes in buffer (state) *\/$/;"	m	struct:__anon3
+RecvBytes	xiic.h	/^	u8 RecvBytes;	   \/**< Number of bytes received *\/$/;"	m	struct:__anon2
+RecvCallBackRef	xiic.h	/^	void *RecvCallBackRef;	  \/**< Callback reference for Recv handler *\/$/;"	m	struct:__anon3
+RecvData	xiic_l.c	/^static unsigned RecvData(UINTPTR BaseAddress, u8 *BufferPtr,$/;"	f	file:
+RecvHandler	xiic.h	/^	XIic_Handler RecvHandler; \/**< Receive Handler *\/$/;"	m	struct:__anon3
+RecvInterrupts	xiic.h	/^	u8 RecvInterrupts; \/**< Number of receive interrupts *\/$/;"	m	struct:__anon2
+RecvMasterData	xiic_master.c	/^static void RecvMasterData(XIic *InstancePtr)$/;"	f	file:
+RecvSlaveData	xiic_slave.c	/^static void RecvSlaveData(XIic *InstancePtr)$/;"	f	file:
+RepeatedStarts	xiic.h	/^	u8 RepeatedStarts; \/**< Number of repeated starts *\/$/;"	m	struct:__anon2
+SendBufferPtr	xiic.h	/^	u8 *SendBufferPtr;	\/**< Buffer to send (state) *\/$/;"	m	struct:__anon3
+SendByteCount	xiic.h	/^	int SendByteCount;	\/**< Number of data bytes in buffer (state)  *\/$/;"	m	struct:__anon3
+SendBytes	xiic.h	/^	u8 SendBytes;	   \/**< Number of transmit bytes received *\/$/;"	m	struct:__anon2
+SendCallBackRef	xiic.h	/^	void *SendCallBackRef;	  \/**< Callback reference for send handler *\/$/;"	m	struct:__anon3
+SendData	xiic_l.c	/^static unsigned SendData(UINTPTR BaseAddress, u8 *BufferPtr,$/;"	f	file:
+SendHandler	xiic.h	/^	XIic_Handler SendHandler; \/**< Send Handler *\/$/;"	m	struct:__anon3
+SendInterrupts	xiic.h	/^	u8 SendInterrupts; \/**< Number of transmit interrupts *\/$/;"	m	struct:__anon2
+SendMasterData	xiic_master.c	/^static void SendMasterData(XIic *InstancePtr)$/;"	f	file:
+SendSlaveAddr	xiic_master.c	/^static void SendSlaveAddr(XIic *InstancePtr)$/;"	f	file:
+SendSlaveData	xiic_slave.c	/^static void SendSlaveData(XIic *InstancePtr)$/;"	f	file:
+Stats	xiic.h	/^	XIicStats Stats;	\/**< Statistics *\/$/;"	m	struct:__anon3
+StatusCallBackRef	xiic.h	/^	void *StatusCallBackRef;  \/**< Callback reference for status handler *\/$/;"	m	struct:__anon3
+StatusHandler	xiic.h	/^	XIic_StatusHandler StatusHandler; \/**< Status Handler *\/$/;"	m	struct:__anon3
+StubFunction	xiic_intr.c	/^static void StubFunction(XIic *InstancePtr)$/;"	f	file:
+TxAddrMode	xiic.h	/^	u8 TxAddrMode;		\/**< State of Tx Address transmission *\/$/;"	m	struct:__anon3
+TxErrorHandler	xiic_intr.c	/^static void TxErrorHandler(XIic *InstancePtr)$/;"	f	file:
+TxErrors	xiic.h	/^	u8 TxErrors;	   \/**< Number of transmit errors (no ack) *\/$/;"	m	struct:__anon2
+XIIC_ADR_REG_OFFSET	xiic_l.h	114;"	d
+XIIC_CR_DIR_IS_TX_MASK	xiic_l.h	183;"	d
+XIIC_CR_ENABLE_DEVICE_MASK	xiic_l.h	180;"	d
+XIIC_CR_GENERAL_CALL_MASK	xiic_l.h	186;"	d
+XIIC_CR_MSMS_MASK	xiic_l.h	182;"	d
+XIIC_CR_NO_ACK_MASK	xiic_l.h	184;"	d
+XIIC_CR_REG_OFFSET	xiic_l.h	110;"	d
+XIIC_CR_REPEATED_START_MASK	xiic_l.h	185;"	d
+XIIC_CR_TX_FIFO_RESET_MASK	xiic_l.h	181;"	d
+XIIC_DGIER_OFFSET	xiic_l.h	106;"	d
+XIIC_DRR_REG_OFFSET	xiic_l.h	113;"	d
+XIIC_DTR_REG_OFFSET	xiic_l.h	112;"	d
+XIIC_DYN_MASTER_INCLUDE	xiic_dyn_master.c	84;"	d	file:
+XIIC_GINTR_ENABLE_MASK	xiic_l.h	127;"	d
+XIIC_GPO_REG_OFFSET	xiic_l.h	119;"	d
+XIIC_H	xiic.h	313;"	d
+XIIC_IIER_OFFSET	xiic_l.h	108;"	d
+XIIC_IISR_OFFSET	xiic_l.h	107;"	d
+XIIC_INTR_AAS_MASK	xiic_l.h	150;"	d
+XIIC_INTR_ARB_LOST_MASK	xiic_l.h	145;"	d
+XIIC_INTR_BNB_MASK	xiic_l.h	149;"	d
+XIIC_INTR_NAAS_MASK	xiic_l.h	151;"	d
+XIIC_INTR_RX_FULL_MASK	xiic_l.h	148;"	d
+XIIC_INTR_TX_EMPTY_MASK	xiic_l.h	147;"	d
+XIIC_INTR_TX_ERROR_MASK	xiic_l.h	146;"	d
+XIIC_INTR_TX_HALF_MASK	xiic_l.h	152;"	d
+XIIC_I_H	xiic_i.h	76;"	d
+XIIC_L_H	xiic_l.h	86;"	d
+XIIC_MASTER_INCLUDE	xiic_master.c	91;"	d	file:
+XIIC_MASTER_ROLE	xiic_l.h	238;"	d
+XIIC_READ_OPERATION	xiic_l.h	231;"	d
+XIIC_REPEATED_START	xiic_l.h	248;"	d
+XIIC_RESETR_OFFSET	xiic_l.h	109;"	d
+XIIC_RESET_MASK	xiic_l.h	172;"	d
+XIIC_RFD_REG_OFFSET	xiic_l.h	118;"	d
+XIIC_RFO_REG_OFFSET	xiic_l.h	116;"	d
+XIIC_SLAVE_ROLE	xiic_l.h	239;"	d
+XIIC_SR_ADDR_AS_SLAVE_MASK	xiic_l.h	195;"	d
+XIIC_SR_BUS_BUSY_MASK	xiic_l.h	197;"	d
+XIIC_SR_GEN_CALL_MASK	xiic_l.h	193;"	d
+XIIC_SR_MSTR_RDING_SLAVE_MASK	xiic_l.h	198;"	d
+XIIC_SR_REG_OFFSET	xiic_l.h	111;"	d
+XIIC_SR_RX_FIFO_EMPTY_MASK	xiic_l.h	202;"	d
+XIIC_SR_RX_FIFO_FULL_MASK	xiic_l.h	201;"	d
+XIIC_SR_TX_FIFO_EMPTY_MASK	xiic_l.h	203;"	d
+XIIC_SR_TX_FIFO_FULL_MASK	xiic_l.h	200;"	d
+XIIC_STOP	xiic_l.h	246;"	d
+XIIC_TBA_REG_OFFSET	xiic_l.h	117;"	d
+XIIC_TFO_REG_OFFSET	xiic_l.h	115;"	d
+XIIC_TX_ADDR_MSTR_RECV_MASK	xiic_l.h	224;"	d
+XIIC_TX_ADDR_SENT	xiic_l.h	223;"	d
+XIIC_TX_DYN_START_MASK	xiic_l.h	210;"	d
+XIIC_TX_DYN_STOP_MASK	xiic_l.h	211;"	d
+XIIC_TX_INTERRUPTS	xiic_l.h	157;"	d
+XIIC_TX_RX_INTERRUPTS	xiic_l.h	164;"	d
+XIIC_WRITE_OPERATION	xiic_l.h	232;"	d
+XII_ADDR_TO_RESPOND_TYPE	xiic.h	394;"	d
+XII_ADDR_TO_SEND_TYPE	xiic.h	393;"	d
+XII_ARB_LOST_EVENT	xiic.h	380;"	d
+XII_BUS_NOT_BUSY_EVENT	xiic.h	379;"	d
+XII_GENERAL_CALL_EVENT	xiic.h	384;"	d
+XII_GENERAL_CALL_OPTION	xiic.h	365;"	d
+XII_MASTER_READ_EVENT	xiic.h	382;"	d
+XII_MASTER_WRITE_EVENT	xiic.h	383;"	d
+XII_REPEATED_START_OPTION	xiic.h	366;"	d
+XII_SEND_10_BIT_OPTION	xiic.h	367;"	d
+XII_SLAVE_NO_ACK_EVENT	xiic.h	381;"	d
+XIic	xiic.h	/^} XIic;$/;"	t	typeref:struct:__anon3
+XIicStats	xiic.h	/^} XIicStats;$/;"	t	typeref:struct:__anon2
+XIic_AddrAsSlaveFuncPtr	xiic_intr.c	/^void (*XIic_AddrAsSlaveFuncPtr) (XIic *InstancePtr) = StubFunction;$/;"	v
+XIic_ArbLostFuncPtr	xiic_intr.c	/^void (*XIic_ArbLostFuncPtr) (XIic *InstancePtr) = StubFunction;$/;"	v
+XIic_BusNotBusyFuncPtr	xiic_intr.c	/^void (*XIic_BusNotBusyFuncPtr) (XIic *InstancePtr) = StubFunction;$/;"	v
+XIic_CfgInitialize	xiic.c	/^int XIic_CfgInitialize(XIic *InstancePtr, XIic_Config * Config,$/;"	f
+XIic_CheckIsBusBusy	xiic_l.c	/^u32 XIic_CheckIsBusBusy(UINTPTR BaseAddress)$/;"	f
+XIic_ClearEnableIntr	xiic_i.h	234;"	d
+XIic_ClearIisr	xiic_l.h	464;"	d
+XIic_ClearIntr	xiic_i.h	214;"	d
+XIic_ClearStats	xiic_stats.c	/^void XIic_ClearStats(XIic *InstancePtr)$/;"	f
+XIic_Config	xiic.h	/^} XIic_Config;$/;"	t	typeref:struct:__anon1
+XIic_ConfigTable	xiic_g.c	/^XIic_Config XIic_ConfigTable[XPAR_XIIC_NUM_INSTANCES] = {$/;"	v
+XIic_DisableIntr	xiic_i.h	176;"	d
+XIic_DynInit	xiic_l.c	/^int XIic_DynInit(UINTPTR BaseAddress)$/;"	f
+XIic_DynMasterRecv	xiic_dyn_master.c	/^int XIic_DynMasterRecv(XIic *InstancePtr, u8 *RxMsgPtr, u8 ByteCount)$/;"	f
+XIic_DynMasterSend	xiic_dyn_master.c	/^int XIic_DynMasterSend(XIic *InstancePtr, u8 *TxMsgPtr, u8 ByteCount)$/;"	f
+XIic_DynRecv	xiic_l.c	/^unsigned XIic_DynRecv(UINTPTR BaseAddress, u8 Address, u8 *BufferPtr, u8 ByteCount)$/;"	f
+XIic_DynSend	xiic_l.c	/^unsigned XIic_DynSend(UINTPTR BaseAddress, u16 Address, u8 *BufferPtr,$/;"	f
+XIic_DynSend7BitAddress	xiic_l.h	512;"	d
+XIic_DynSendStartStopAddress	xiic_l.h	539;"	d
+XIic_DynSendStop	xiic_l.h	563;"	d
+XIic_DynamicInitialize	xiic_dyn_master.c	/^int XIic_DynamicInitialize(XIic *InstancePtr)$/;"	f
+XIic_EnableIntr	xiic_i.h	195;"	d
+XIic_FlushRxFifo	xiic_i.h	257;"	d
+XIic_FlushTxFifo	xiic_i.h	283;"	d
+XIic_GetAddress	xiic.c	/^u16 XIic_GetAddress(XIic *InstancePtr, int AddressType)$/;"	f
+XIic_GetGpOutput	xiic.c	/^int XIic_GetGpOutput(XIic *InstancePtr, u8 *OutputValuePtr)$/;"	f
+XIic_GetOptions	xiic_options.c	/^u32 XIic_GetOptions(XIic *InstancePtr)$/;"	f
+XIic_GetStats	xiic_stats.c	/^void XIic_GetStats(XIic *InstancePtr, XIicStats * StatsPtr)$/;"	f
+XIic_Handler	xiic.h	/^typedef void (*XIic_Handler) (void *CallBackRef, int ByteCount);$/;"	t
+XIic_In32	xiic_l.h	253;"	d
+XIic_Initialize	xiic_sinit.c	/^int XIic_Initialize(XIic *InstancePtr, u16 DeviceId)$/;"	f
+XIic_InterruptHandler	xiic_intr.c	/^void XIic_InterruptHandler(void *InstancePtr)$/;"	f
+XIic_IntrGlobalDisable	xiic_l.h	315;"	d
+XIic_IntrGlobalEnable	xiic_l.h	333;"	d
+XIic_IsIicBusy	xiic.h	/^static inline u32 XIic_IsIicBusy(XIic *InstancePtr)$/;"	f
+XIic_IsIntrGlobalEnabled	xiic_l.h	353;"	d
+XIic_IsSlave	xiic.c	/^u32 XIic_IsSlave(XIic *InstancePtr)$/;"	f
+XIic_LookupConfig	xiic_sinit.c	/^XIic_Config *XIic_LookupConfig(u16 DeviceId)$/;"	f
+XIic_MasterRecv	xiic_master.c	/^int XIic_MasterRecv(XIic *InstancePtr, u8 *RxMsgPtr, int ByteCount)$/;"	f
+XIic_MasterSend	xiic_master.c	/^int XIic_MasterSend(XIic *InstancePtr, u8 *TxMsgPtr, int ByteCount)$/;"	f
+XIic_MultiMasterInclude	xiic_multi_master.c	/^void XIic_MultiMasterInclude()$/;"	f
+XIic_NotAddrAsSlaveFuncPtr	xiic_intr.c	/^void (*XIic_NotAddrAsSlaveFuncPtr) (XIic *InstancePtr) = StubFunction;$/;"	v
+XIic_Out32	xiic_l.h	254;"	d
+XIic_ReadIier	xiic_l.h	445;"	d
+XIic_ReadIisr	xiic_l.h	401;"	d
+XIic_ReadRecvByte	xiic_i.h	306;"	d
+XIic_ReadReg	xiic_l.h	275;"	d
+XIic_Recv	xiic_l.c	/^unsigned XIic_Recv(UINTPTR BaseAddress, u8 Address,$/;"	f
+XIic_RecvMasterFuncPtr	xiic_intr.c	/^void (*XIic_RecvMasterFuncPtr) (XIic *InstancePtr) = StubFunction;$/;"	v
+XIic_RecvSlaveFuncPtr	xiic_intr.c	/^void (*XIic_RecvSlaveFuncPtr) (XIic *InstancePtr) = StubFunction;$/;"	v
+XIic_Reset	xiic.c	/^void XIic_Reset(XIic *InstancePtr)$/;"	f
+XIic_SelfTest	xiic_selftest.c	/^int XIic_SelfTest(XIic *InstancePtr)$/;"	f
+XIic_Send	xiic_l.c	/^unsigned XIic_Send(UINTPTR BaseAddress, u8 Address,$/;"	f
+XIic_Send10BitAddrByte1	xiic_i.h	113;"	d
+XIic_Send10BitAddrByte2	xiic_i.h	135;"	d
+XIic_Send7BitAddr	xiic_i.h	153;"	d
+XIic_Send7BitAddress	xiic_l.h	486;"	d
+XIic_SendMasterFuncPtr	xiic_intr.c	/^void (*XIic_SendMasterFuncPtr) (XIic *InstancePtr) = StubFunction;$/;"	v
+XIic_SendSlaveFuncPtr	xiic_intr.c	/^void (*XIic_SendSlaveFuncPtr) (XIic *InstancePtr) = StubFunction;$/;"	v
+XIic_SetAddress	xiic.c	/^int XIic_SetAddress(XIic *InstancePtr, int AddressType, int Address)$/;"	f
+XIic_SetControlRegister	xiic_i.h	354;"	d
+XIic_SetGpOutput	xiic.c	/^int XIic_SetGpOutput(XIic *InstancePtr, u8 OutputValue)$/;"	f
+XIic_SetOptions	xiic_options.c	/^void XIic_SetOptions(XIic *InstancePtr, u32 NewOptions)$/;"	f
+XIic_SetRecvHandler	xiic.c	/^void XIic_SetRecvHandler(XIic *InstancePtr, void *CallBackRef,$/;"	f
+XIic_SetSendHandler	xiic.c	/^void XIic_SetSendHandler(XIic *InstancePtr, void *CallBackRef,$/;"	f
+XIic_SetStatusHandler	xiic.c	/^void XIic_SetStatusHandler(XIic *InstancePtr, void *CallBackRef,$/;"	f
+XIic_SlaveInclude	xiic_slave.c	/^void XIic_SlaveInclude()$/;"	f
+XIic_SlaveRecv	xiic_slave.c	/^int XIic_SlaveRecv(XIic *InstancePtr, u8 *RxMsgPtr, int ByteCount)$/;"	f
+XIic_SlaveSend	xiic_slave.c	/^int XIic_SlaveSend(XIic *InstancePtr, u8 *TxMsgPtr, int ByteCount)$/;"	f
+XIic_Start	xiic.c	/^int XIic_Start(XIic *InstancePtr)$/;"	f
+XIic_StatusHandler	xiic.h	/^typedef void (*XIic_StatusHandler) (void *CallBackRef, int StatusEvent);$/;"	t
+XIic_Stop	xiic.c	/^int XIic_Stop(XIic *InstancePtr)$/;"	f
+XIic_StubHandler	xiic.c	/^static void XIic_StubHandler(void *CallBackRef, int ByteCount)$/;"	f	file:
+XIic_StubStatusHandler	xiic.c	/^static void XIic_StubStatusHandler(void *CallBackRef, int ErrorCode)$/;"	f	file:
+XIic_TransmitFifoFill	xiic_intr.c	/^void XIic_TransmitFifoFill(XIic *InstancePtr, int Role)$/;"	f
+XIic_WaitBusFree	xiic_l.c	/^u32 XIic_WaitBusFree(UINTPTR BaseAddress)$/;"	f
+XIic_WriteIier	xiic_l.h	425;"	d
+XIic_WriteIisr	xiic_l.h	382;"	d
+XIic_WriteReg	xiic_l.h	298;"	d
+XIic_WriteSendByte	xiic_i.h	327;"	d

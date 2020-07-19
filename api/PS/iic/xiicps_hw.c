@@ -54,7 +54,6 @@
 /***************************** Include Files *********************************/
 
 #include "xiicps_hw.h"
-#include "xil_types.h"
 
 /************************** Constant Definitions *****************************/
 
@@ -84,26 +83,6 @@
 * This function will not modify the slcr registers that are relavant for
 * I2c controller
 ******************************************************************************/
-
-
-
-uint32_t XIicPs_ReadReg(UINTPTR vir_regaddr, uint32_t offset)
-{
-        uint32_t *ptr = (uint32_t *) vir_regaddr;
-        return *(ptr + (offset/4));
-}
-
-
-
-uint32_t XIicPs_WriteReg(UINTPTR vir_regaddr, uint32_t offset, uint32_t data)
-{
-        uint32_t *ptr = (uint32_t *) vir_regaddr;
-       *(ptr + (offset/4)) = data;
-}
-
-
-
-
 void XIicPs_ResetHw(u32 BaseAddress)
 {
 	u32 RegVal;

@@ -62,12 +62,8 @@
 
 /***************************** Include Files *********************************/
 
-//#include "xil_assert.h"
 #include "xiicps.h"
-#include "xstatus.h"
-//#include "xil_io.h"
 
-#include "xil_io.c"
 /************************** Constant Definitions *****************************/
 
 /**************************** Type Definitions *******************************/
@@ -77,17 +73,6 @@
 /************************** Function Prototypes ******************************/
 
 static void StubHandler(void *CallBackRef, u32 StatusEvent);
-
-
-
-u32 XIicPs_GetOptions(XIicPs *InstancePtr);
-u32 Xil_AssertStatus;
-s32 Xil_AssertWait;
-
-void Xil_Assert(const char8 *File, s32 Line);
-void XNullHandler(void *NullParameter);
-
-
 
 /************************** Variable Definitions *****************************/
 
@@ -126,14 +111,12 @@ s32 XIicPs_CfgInitialize(XIicPs *InstancePtr, XIicPs_Config *ConfigPtr,
 	/*
 	 * Assert validates the input arguments.
 	 */
-
 	Xil_AssertNonvoid(InstancePtr != NULL);
 	Xil_AssertNonvoid(ConfigPtr != NULL);
 
 	/*
 	 * Set some default values.
 	 */
-
 	InstancePtr->Config.DeviceId = ConfigPtr->DeviceId;
 	InstancePtr->Config.BaseAddress = EffectiveAddr;
 	InstancePtr->Config.InputClockHz = ConfigPtr->InputClockHz;
@@ -147,17 +130,14 @@ s32 XIicPs_CfgInitialize(XIicPs *InstancePtr, XIicPs_Config *ConfigPtr,
 	 * that device configuration will take place after this initialization
 	 * is done, but before the device is started.
 	 */
-
 	XIicPs_Reset(InstancePtr);
 
 	/*
 	 * Keep a copy of what options this instance has.
 	 */
-
 	InstancePtr->Options = XIicPs_GetOptions(InstancePtr);
 
 	/* Initialize repeated start flag to 0 */
-
 	InstancePtr->IsRepeatedStart = 0;
 
 	return (s32)XST_SUCCESS;

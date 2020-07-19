@@ -55,7 +55,6 @@
 
 #include "xiicps.h"
 #include "xparameters.h"
-#define XPAR_XIICPS_0_I2C_CLK_FREQ_HZ 99990005
 
 /************************** Constant Definitions *****************************/
 
@@ -75,7 +74,6 @@
  * This table contains configuration information for each IIC device
  * in the system.
  */
-
 XIicPs_Config XIicPs_ConfigTable[XPAR_XIICPS_NUM_INSTANCES] = {
 	{
 		 (u16)XPAR_XIICPS_0_DEVICE_ID, /* Device ID for instance */
@@ -86,7 +84,7 @@ XIicPs_Config XIicPs_ConfigTable[XPAR_XIICPS_NUM_INSTANCES] = {
 	{
 		 (u16)XPAR_XIICPS_1_DEVICE_ID, /* Device ID for instance */
 		 (u32)XPAR_XIICPS_1_BASEADDR,  /* Device base address */
-		 (u32)XPAR_XIICPS_1_CLOCK_HZ   /* Device input clock frequency */
+		 (u32)XPAR_XIICPS_1_CLOCK_HZ  /* Device input clock frequency */
 	 }
 #endif
 };

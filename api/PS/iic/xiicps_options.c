@@ -62,10 +62,9 @@
 ******************************************************************************/
 
 /***************************** Include Files *********************************/
-#include "xil_types.h"
-//#include "xil_assert.h"
+
 #include "xiicps.h"
-#include "xstatus.h"
+
 /************************** Constant Definitions *****************************/
 
 
@@ -359,7 +358,7 @@ s32 XIicPs_SetSClk(XIicPs *InstancePtr, u32 FsclHz)
 	Xil_AssertNonvoid(InstancePtr->IsReady == (u32)XIL_COMPONENT_IS_READY);
 	Xil_AssertNonvoid(FsclHzVar > 0U);
 
-	if (0U != XIicPs_In32((InstancePtr->Config.BaseAddress) +
+	if (0U != XIicPs_In32((InstancePtr->Config.BaseAddress) ,
 					XIICPS_TRANS_SIZE_OFFSET)) {
 		return (s32)XST_DEVICE_IS_STARTED;
 	}

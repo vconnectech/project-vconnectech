@@ -1,0 +1,27 @@
+COMPILER=aarch64-linux-gnu-gcc
+ARCHIVER=aarch64-linux-gnu-ar
+CP=aarch64-linux-gnu-cp
+COMPILER_FLAGS=
+EXTRA_COMPILER_FLAGS=
+LIB=libxil.a
+
+RELEASEDIR=../../../lib
+INCLUDEDIR=../../../include -I ../../../common/
+INCLUDES=-I./. -I${INCLUDEDIR}
+
+INCLUDEFILES=xiic.h xiic_l.h
+LIBSOURCES=*.c
+OUTS = *.o
+OBJECTS =	$(addsuffix .o, $(basename $(wildcard *.c)))
+
+libs.a:
+	echo "Compiling iic"
+	$(COMPILER) $(COMPILER_FLAGS) $(EXTRA_COMPILER_FLAGS) $(INCLUDES) $(LIBSOURCES)
+	$(ARCHIVER) -r ${RELEASEDIR}/${LIB} $(OBJECTS)
+	make clean
+
+include:
+	 ${CP} ${INCLUDEFILES} ${INCLUDEDIR}
+
+clean:
+	rm -rf ${OBJECTS}

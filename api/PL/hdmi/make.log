@@ -1,0 +1,44 @@
+aarch64-linux-gnu-gcc -o HDMI_App  xhdmi_example.c \
+             xhdmi_edid.c    \
+	     xvidframe_crc.c \
+	     xhdmi_menu.c    \
+	     xhdmi_hdcp_keys.c \
+	     xhdcp.c         \
+	     sha256.c        \
+	     si5324drv.c     \
+	     platform.c      \
+	     idt_8t49n24x.c  \
+	     dp159.c         \
+	     aes256.c        \
+	     audiogen_drv.c  \
+	     xiic_l.c        \
+	     xiicps_g.c      \
+	     xuartps_hw.c    \
+	     xiicps.c        \
+	     xvphy_hdmi.c    \
+	     xscugic_sinit.c \
+	     xvphy.c         \
+	     xvphy_i.c
+Makefile:19: recipe for target 'HDMI_App' failed
+aarch64-linux-gnu-gcc -o HDMI_App  xhdmi_example.c \
+             xhdmi_edid.c    \
+	     xvidframe_crc.c \
+	     xhdmi_menu.c    \
+	     xhdmi_hdcp_keys.c \
+	     xhdcp.c         \
+	     sha256.c        \
+	     si5324drv.c     \
+	     platform.c      \
+	     idt_8t49n24x.c  \
+	     dp159.c         \
+	     aes256.c        \
+	     audiogen_drv.c  \
+	     xiic_l.c        \
+	     xiicps_g.c      \
+	     xuartps_hw.c    \
+	     xiicps.c        \
+	     xvphy_hdmi.c    \
+	     xscugic_sinit.c \
+	     xvphy.c         \
+	     xvphy_i.c
+Makefile:19: recipe for target 'HDMI_App' failed

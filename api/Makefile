@@ -1,4 +1,4 @@
-SUBDIRS := PL PS 
+SUBDIRS := common PL PS 
 
 all: $(SUBDIRS)
 $(SUBDIRS):

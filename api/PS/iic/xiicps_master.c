@@ -70,20 +70,7 @@
 
 /***************************** Include Files *********************************/
 
-
 #include "xiicps.h"
-#include "xiicps_hw.h"
-#include "xil_assert.h"
-#include "xil_types.h"
-#include <stdlib.h>
-#include <stdio.h>
-#include "xil_io.c"
-
-
-
-
-
-
 
 /************************** Constant Definitions *****************************/
 

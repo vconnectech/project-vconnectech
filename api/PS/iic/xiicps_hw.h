@@ -62,8 +62,8 @@ extern "C" {
 /***************************** Include Files *********************************/
 
 #include "xil_types.h"
-//#include "xil_assert.h"
-//#include "xil_io.h"
+#include "xil_assert.h"
+#include "xil_io.h"
 
 /************************** Constant Definitions *****************************/
 
@@ -264,8 +264,9 @@ extern "C" {
 
 /***************** Macros (Inline Functions) Definitions *********************/
 
-#define XIicPs_In32 Xil_In
-#define XIicPs_Out32 Xil_Out
+#define XIicPs_In32 Xil_ReadReg32
+#define XIicPs_Out32 Xil_WriteReg32
+
 /****************************************************************************/
 /**
 * Read an IIC register.
@@ -280,18 +281,8 @@ extern "C" {
 *		u32 XIicPs_ReadReg(u32 BaseAddress. int RegOffset)
 *
 ******************************************************************************/
-//#define XIicPs_ReadReg(BaseAddress, RegOffset) \
-//	XIicPs_In32((BaseAddress) + (u32)(RegOffset))
-
-extern uint32_t XIicPs_ReadReg(UINTPTR vir_regaddr, uint32_t offset);
-
-/*uint32_t XIicPs_ReadReg(UINTPTR vir_regaddr, uint32_t offset)
-{
-        uint32_t *ptr = (uint32_t *) vir_regaddr;
-        return *(ptr + (offset/4));
-}
-
-*/
+#define XIicPs_ReadReg(BaseAddress, RegOffset) \
+	Xil_ReadReg32(BaseAddress, (u32)(RegOffset))
 
 /***************************************************************************/
 /**
@@ -308,21 +299,8 @@ extern uint32_t XIicPs_ReadReg(UINTPTR vir_regaddr, uint32_t offset);
 *	void XIicPs_WriteReg(u32 BaseAddress, int RegOffset, u32 RegisterValue)
 *
 ******************************************************************************/
-/*#define XIicPs_WriteReg(BaseAddress, RegOffset, RegisterValue) \
-//	XIicPs_Out32((BaseAddress) + (u32)(RegOffset), (u32)(RegisterValue))
-*/
-
-extern uint32_t XIicPs_WriteReg(UINTPTR vir_regaddr, uint32_t offset,u32 RegValue);
-/*
-void XIicPs_WriteReg(UINTPTR vir_regaddr, uint32_t offset, uint32_t data)
-{
-        uint32_t *ptr = (uint32_t *) vir_regaddr;
-       *(ptr + (offset/4)) = data;
-}
-
-*/
-
-
+#define XIicPs_WriteReg(BaseAddress, RegOffset, RegisterValue) \
+	Xil_WriteReg32((BaseAddress), (u32)(RegOffset), (u32)(RegisterValue))
 
 /***************************************************************************/
 /**
@@ -336,20 +314,8 @@ void XIicPs_WriteReg(UINTPTR vir_regaddr, uint32_t offset, uint32_t data)
 *		u32 XIicPs_ReadIER(u32 BaseAddress)
 *
 ******************************************************************************/
-/*#define XIicPs_ReadIER(BaseAddress) \
-//	XIicPs_ReadReg((BaseAddress),  XIICPS_IER_OFFSET)
-*/
-
-
-extern uint32_t XIicPs_ReadIER(UINTPTR vir_regaddr, uint32_t offset);
-
-/*
-uint32_t XIicPs_ReadIER(UINTPTR vir_regaddr, uint32_t offset)
-{
-        uint32_t *ptr = (uint32_t *) vir_regaddr;
-        return *(ptr + (offset/4));
-}
-*/
+#define XIicPs_ReadIER(BaseAddress) \
+	XIicPs_ReadReg((BaseAddress),  XIICPS_IER_OFFSET)
 
 /***************************************************************************/
 /**

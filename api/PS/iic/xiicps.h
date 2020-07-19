@@ -203,9 +203,8 @@ extern "C" {
 #include "xil_types.h"
 #include "xil_assert.h"
 #include "xstatus.h"
-#include "xiicps_hw.h" 	     
+#include "xiicps_hw.h"
 #include "xplatform_info.h"
-#include "xil_io.h"
 
 /************************** Constant Definitions *****************************/
 
@@ -321,7 +320,7 @@ typedef struct {
 	u8 Data;							\
 	Data = *((InstancePtr)->SendBufferPtr);				\
 	 XIicPs_Out32((InstancePtr)->Config.BaseAddress			\
-			 + (u32)(XIICPS_DATA_OFFSET), 			\
+			 , (u32)(XIICPS_DATA_OFFSET), 			\
 					(u32)(Data));			\
 	(InstancePtr)->SendBufferPtr += 1;				\
 	(InstancePtr)->SendByteCount -= 1;\
@@ -344,7 +343,7 @@ typedef struct {
 {									\
 	u8 *Data, Value;						\
 	Value = (u8)(XIicPs_In32((InstancePtr)->Config.BaseAddress	\
-		  + (u32)XIICPS_DATA_OFFSET));  			\
+		  , (u32)XIICPS_DATA_OFFSET));  			\
 	Data = &Value;							\
 	*(InstancePtr)->RecvBufferPtr = *Data;				\
 	(InstancePtr)->RecvBufferPtr += 1;				\
@@ -363,22 +362,6 @@ XIicPs_Config *XIicPs_LookupConfig(u16 DeviceId);
  */
 s32 XIicPs_CfgInitialize(XIicPs *InstancePtr, XIicPs_Config * ConfigPtr,
 				  u32 EffectiveAddr);
-
-
-
-
-u32 XIicPs_GetOptions(XIicPs *InstancePtr);
-u32 Xil_AssertStatus;
-s32 Xil_AssertWait;
-
-void Xil_Assert(const char8 *File, s32 Line);
-void XNullHandler(void *NullParameter);
-
-
-
-
-
-
 
 void XIicPs_Abort(XIicPs *InstancePtr);
 void XIicPs_Reset(XIicPs *InstancePtr);
