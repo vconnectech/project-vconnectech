@@ -1,14 +1,13 @@
-#include "xaxidma.h"
-#include "xstatus.h"
-#include "xparameters.h"
-#include "xdebug.h"
 #include <unistd.h>
 #include <sys/stat.h>
 #include <sys/mman.h>
 #include <fcntl.h>
 #include <stdio.h>
 #include <sys/time.h>
-
+#include "xaxidma.h"
+#include "xstatus.h"
+#include "xparameters.h"
+#include "xdebug.h"
 /******************** Constant Definitions **********************************/
 
 /*
